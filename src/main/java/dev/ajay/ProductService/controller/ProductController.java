@@ -23,4 +23,9 @@ public class ProductController {
     public void createProduct(){
 
     }
+
+    @GetMapping("/check/health")
+    public String checkhealth(){
+        return "Application is running on :8080";
+    }
 }
