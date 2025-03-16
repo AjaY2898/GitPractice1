@@ -3,7 +3,7 @@ package dev.ajay.ProductService.controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/v1/product/")
+@RequestMapping(value = "/api/v1/products/")
 public class ProductController {
 
     @GetMapping("{id}")
@@ -11,22 +11,17 @@ public class ProductController {
 
     }
 
-    @DeleteMapping("{id}")
-    public void deleteProductById(){
-
-    }
     @GetMapping
     public  void getAllProduct(){
 
     }
+    @DeleteMapping("{id}")
+    public void deleteProductById(){
+
+    }
+
     @PutMapping
-    public void createProduct(){
+    public void createProduct() {
 
     }
-
-    @GetMapping("/check/health")
-    public String checkhealth(){
-        return "Application is running on :8080";
-    }
-
 }
