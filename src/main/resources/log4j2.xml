@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>
+                    %style{%d{yyyy-MM-dd HH:mm:ss.SSS}}{cyan}  <!-- Timestamp in cyan -->
+                    %style{[%t]}{magenta}  <!-- Thread name in magenta -->
+                    %style{(PID: %pid)}{bright_red}  <!-- Process ID in bright red -->
+                    %highlight{%-5level}  <!-- Log level: INFO (green), WARN (yellow), ERROR (red) -->
+                    %style{%logger{36}}{blue}  <!-- Logger name in blue -->
+                    .%style{%M}{bright_green}  <!-- Method name in bright green -->
+                    (%style{%line}{bright_white}) - %msg%n
+                </Pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>
